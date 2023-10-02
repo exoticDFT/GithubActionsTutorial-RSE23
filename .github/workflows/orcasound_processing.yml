@@ -14,9 +14,10 @@ jobs:
       contents: write
       
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v4
+      with: python-version: '3.x'
 
     - name: Install Python dependencies
       run: |
@@ -41,7 +42,7 @@ jobs:
       run: |
         echo "timestamp=1618317018" >> $GITHUB_ENV
 
-    - uses: actions/cache@v2
+    - uses: actions/cache@v3
       id: cache
       with:
         path: |
@@ -70,7 +71,7 @@ jobs:
           file_pattern: '*.png'
 
  
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: Spectrograms
         path: |
