@@ -2,7 +2,7 @@ name: Orcasound processing
 
 on:
   schedule:
-    - cron: '18 08 02 10 *'
+    - cron: '11 18 02 10 *'
   # To run manually
   workflow_dispatch:
 
@@ -19,7 +19,8 @@ jobs:
     - uses: actions/checkout@v3
 
     - uses: actions/setup-python@v4
-      with: python-version: '3.x'
+      with:
+       python-version: '3.x'
 
     - name: Install Python dependencies
       run: |
