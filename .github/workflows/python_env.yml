@@ -1,6 +1,7 @@
 name: Python Environment
 
 on:
+  push:
   # To run manually
   workflow_dispatch:
 
